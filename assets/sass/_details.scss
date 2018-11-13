@@ -1,0 +1,305 @@
+.details-page {
+    background: #f7f8fa;
+    padding: 20px 0;
+
+    .white-box {
+        padding: 20px;
+        background: #fff;
+        text-align: center;
+    }
+
+    .sub-menu {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        nav {
+            a {
+                color: #adbed2;
+                padding: 20px;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    cursor: pointer;
+                    color: #2a7dddb0;
+                }
+            }
+        }
+
+        .directions {
+            display: flex;
+            flex-direction: row;
+
+            a {
+                color: #adbed2;
+                padding: 20px;
+                font-weight: bold;
+                text-decoration: none;
+
+                &:hover {
+                    cursor: pointer;
+                    color: #2a7dddb0;
+                }
+            }
+        }
+
+        .sub-links {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    .content-area {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+
+        .media-column {
+            .gallery {
+                .slider {
+                    margin-bottom: 5px;
+
+                    .main-image {
+                        position: relative;
+
+                        .arrows {
+                            top: 0;
+                            bottom: 0;
+                            padding: 0 20px;
+                            height: 100%;
+                            position: absolute;
+                            background: rgba(0, 0, 0, .5);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 3rem;
+                            color: white;
+                            cursor: pointer;
+
+                            &.left-arrow {
+                                left: 0;
+                            }
+
+                            &.right-arrow {
+                                right: 0;
+                            }
+                        }
+
+                        .image-1 {
+                            width: 100%;
+                            height: 400px;
+                            background-size: cover;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+
+                .thumbnails {
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
+                    grid-gap: 5px;
+
+                    .thumb-img {
+                        width: 100px;
+                        height: 100px;
+                        background-size: cover;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        cursor: pointer
+                    }
+                }
+            }
+        }
+
+        .details-column {
+            .date {
+                font-size: .9rem;
+                color: #424242;
+                margin-bottom: 15px;
+            }
+
+            .title {
+                font-size: 2rem;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            .price {
+                font-size: 1.7rem;
+                color: green;
+                font-weight: 500;
+                margin-bottom: 30px;
+            }
+
+            label {
+                font-weight: 700;
+                font-size: 0.7rem;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                display: block;
+            }
+
+            .more-details {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 15px;
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+                border-bottom: 2px solid #f6f6f7;
+
+                .info {
+                    h5 {
+                        font-size: 0.9rem;
+                        font-weight: 300;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+            .description {
+                p {
+                    color: #424242;
+                    font-size: 0.9rem;
+                    line-height: 1.5;
+                    margin-bottom: 1.5rem;
+                    text-align: start;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1015px) {
+
+    .details-page {
+        .details-container {
+            .white-box {
+                .sub-menu {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .content-area {
+                    .details-column {
+                        margin-top: 10px;
+
+                        .more-details {
+                            grid-template-columns: repeat(2, 1fr);
+                        }
+                    }
+                }
+
+                #subLinks {
+                    .sub-links {
+                        text-decoration: none;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        margin-top: 20px;
+
+                        a {
+                            color: #adbed2;
+                            padding: 20px;
+                            font-weight: bold;
+                            text-decoration: none;
+
+                            &:hover {
+                                cursor: pointer;
+                                color: #2a7dddb0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 930px) {
+
+    .details-page {
+        .details-container {
+            .white-box {
+                .content-area {
+                    grid-template-columns: repeat(1, 1fr);
+
+                    .media-column {
+                        .gallery {
+                            .thumbnails {
+                                display: flex;
+                                flex-flow: row wrap;
+                                justify-content: center;
+
+                                .thumb-img {
+                                    margin: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .details-page {
+        .details-container {
+            .white-box {
+                .content-area {
+                    .media-column {
+                        .gallery {
+                            .slider {
+                                .main-image {
+                                    .arrows {
+                                        background: rgba(0, 0, 0, 0.2);
+                                        font-size: 1.3rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .details-page {
+        .details-container {
+            .white-box {
+                .content-area {
+                    .media-column {
+                        .gallery {
+                            .slider {
+                                .main-image {
+                                    .arrows {
+                                        background: rgba(0, 0, 0, 0.1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .details-column {
+                        .more-details {
+                            grid-template-columns: repeat(1, 1fr);
+                        }
+                    }
+                }
+
+                #subLinks {
+                    text-align: center;
+
+                    .sub-links {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}
