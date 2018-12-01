@@ -2055,7 +2055,7 @@ var home = function (_Component) {
                 history = _props2.history;
 
             var background = {
-                backgroundImage: 'linear-gradient(to right, rgba(96, 96, 201, .8) 0%, rgba(176, 54, 217, .8) 100%),\n                url("./public/img/' + match.params.city + '.jpg")'
+                backgroundImage: 'linear-gradient(to right, rgba(96, 96, 201, .8) 0%, rgba(176, 54, 217, .8) 100%),\n                url("/img/' + match.params.city + '.jpg")'
             };
             return _react2.default.createElement(
                 'div',

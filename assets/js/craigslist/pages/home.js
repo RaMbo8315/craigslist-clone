@@ -81,7 +81,7 @@ export default class home extends Component {
         const { match, history } = this.props;
         const background = {
             backgroundImage: `linear-gradient(to right, rgba(96, 96, 201, .8) 0%, rgba(176, 54, 217, .8) 100%),
-                url("./public/img/${match.params.city}.jpg")`
+                url("/img/${match.params.city}.jpg")`
         }
         return (
             <div className={'home'} style={background}>
