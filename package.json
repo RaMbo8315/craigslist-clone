@@ -1,11 +1,11 @@
 {
   "name": "craigslist_clone",
   "version": "1.0.0",
-  "description": "Super Cool Framework",
+  "description": "",
   "main": "index.js",
-  "author": "joe santos garcia",
+  "author": "",
   "license": "MIT",
-  "homepage": "http://rocky.codingphase.com/",
+  "homepage": "/",
   "dependencies": {
     "axios": "^0.18.0",
     "babel-core": "^6.24.1",
