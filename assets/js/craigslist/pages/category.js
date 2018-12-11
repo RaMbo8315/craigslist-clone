@@ -247,41 +247,6 @@ export default class category extends Component {
     document.getElementById("side-filter").style.width = "100%";
   }
 
-  // modelChange = () => {
-  //   let modelList = new Array(3)
-  //   modelList['empty'] = ['Choose a Make'];
-  //   modelList['honda'] = ['civic', 'accord', 'cr-v'];
-  //   modelList['nissan'] = ['sentra', 'altima', 'maxima'];
-  //   modelList['toyota'] = ['corolla', 'camry', 'avalon'];
-  //   // get the index of the selected option 
-  //   let idx = document.getElementById("make").selectedIndex;
-  //   // get the value of the selected option 
-  //   let which = document.getElementById("make").options[idx].value;
-  //   // use the selected option value to retrieve the list of items from the countryLists array 
-  //   mList = modelList[which];
-  //   // get the country select element via its known id 
-  //   let mSelect = document.getElementById("model");
-  //   // remove the current options from the country select 
-  //   let len = mSelect.options.length;
-  //   while (mSelect.options.length > 0) {
-  //     mSelect.remove(0);
-  //   }
-  //   let newOption;
-  //   // create new options 
-  //   for (let i = 0; i < mList.length; i++) {
-  //     newOption = document.createElement("option");
-  //     newOption.value = mList[i];  // assumes option string and value are the same 
-  //     newOption.text = mList[i];
-  //     // add the new option 
-  //     try {
-  //       mSelect.add(newOption);  // this will fail in DOM browsers but is needed for IE 
-  //     }
-  //     catch (e) {
-  //       mSelect.appendChild(newOption);
-  //     }
-  //   }
-  // }
-
   render() {
     const { match, location, history } = this.props
 
