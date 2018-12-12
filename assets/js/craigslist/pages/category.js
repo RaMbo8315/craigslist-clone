@@ -118,53 +118,6 @@ export default class category extends Component {
     }
   }
 
-  // models = () => {
-  //   if (this.state.make == '') {
-  //     return (
-  //       <div>
-  //         <select name='model' id={'model'} className={'model'}
-  //           onChange={this.handleChange}>
-  //           <option value=''>and model</option>
-  //         </select>
-  //       </div>
-  //     )
-  //   } else if (this.state.make == 'nissan') {
-  //     return (
-  //       <div>
-  //         <select name='model' id={'model'} className={'model'}
-  //           onChange={this.handleChange}>
-  //           <option value='sentra'>Sentra</option>
-  //           <option value='altima'>Altima</option>
-  //           <option value='maxima'>Maxima</option>
-  //         </select>
-  //       </div>
-  //     )
-  //   } else if (this.state.make == 'toyota') {
-  //     return (
-  //       <div>
-  //         <select name='model' id={'model'} className={'model'}
-  //           onChange={this.handleChange}>
-  //           <option value='corolla'>Corolla</option>
-  //           <option value='camry'>Camry</option>
-  //           <option value='avalon'>Avalon</option>
-  //         </select>
-  //       </div>
-  //     )
-  //   } else if (this.state.make == 'honda') {
-  //     return (
-  //       <div>
-  //         <select name='model' id={'model'} className={'model'}
-  //           onChange={this.handleChange}>
-  //           <option value='civic'>Civic</option>
-  //           <option value='cr-v'>CR-V</option>
-  //           <option value='accord'>Accord</option>
-  //         </select>
-  //       </div>
-  //     )
-  //   }
-
-  // }
-
   modelChange = (event) => {
     const model = document.getElementById("model").value;
     const name = event.target.name;
@@ -238,9 +191,9 @@ export default class category extends Component {
       .catch(function (error) {
         console.log(error);
       });
-      if(this.state.width <= 400){
-    document.getElementById("side-filter").style.width = "0";
-  }
+    if (this.state.width <= 400) {
+      document.getElementById("side-filter").style.width = "0";
+    }
   }
 
   openMenu = () => {
@@ -252,10 +205,10 @@ export default class category extends Component {
 
     return (
       <div>
-        {(this.state.width <= 400) ? 
-        <Filter handleChange={this.handleChange} min_price={this.state.min_price}
-          max_price={this.state.max_price} modelChange={this.modelChange}
-          submitFilters={this.submitFilters} />
+        {(this.state.width <= 400) ?
+          <Filter handleChange={this.handleChange} min_price={this.state.min_price}
+            max_price={this.state.max_price} modelChange={this.modelChange}
+            submitFilters={this.submitFilters} />
           : ''}
         <div className={'listings-page'}>
           <div className={'container'}>
